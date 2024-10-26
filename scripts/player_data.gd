@@ -12,14 +12,16 @@ class_name player_data
 @export var position: String
 
 @export_category("Attacking Attributes")
-@export var attack: int
+var attack: int
+var agility: int
 
 @export_category("Midfielding Attributes")
-@export var passing: int
-@export var speed: int
+var passing: int
+var speed: int
+var ball_control: int
 
 @export_category("Defending Attributes")
-@export var defend: int
+var defend: int
 
 @export_category("Goalkeeping Attributes")
-@export var goalkeeping: int
+var goalkeeping: int

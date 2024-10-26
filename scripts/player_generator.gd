@@ -97,10 +97,12 @@ var base_defend: int = 2
 var base_goalkeeping: int = 2
 var base_passing: int = 2
 var base_speed: int = 2
+var base_agility: int = 2
+var base_ball_control: int = 2
 var max_stat_added: int = 18
 
 func _ready() -> void:
-	generate_players(100)
+	generate_players(3)
 
 func generate_players(count: int):
 	for i in range(count):
@@ -113,6 +115,8 @@ func generate_players(count: int):
 		var attack_randomizer = randf()
 		var defend_randomizer = randf()
 		var pass_randomizer = randf()
+		var agility_randomizer = randf()
+		var ball_control_randomizer = randf()
 		var goalkeeping_randomizer = randf()
 		#player name
 		player.first_name = first_name_list[randi() % first_name_list.size()]
@@ -168,12 +172,35 @@ func generate_players(count: int):
 			player.attack = base_attack + randi_range(5, 8)
 		elif attack_randomizer < 0.6:
 			player.attack = base_attack + randi_range(9, 11)
-		elif attack_randomizer < 0.8:
+		elif attack_randomizer < 0.85:
 			player.attack = base_attack + randi_range(11, 14)
 		else:
 			player.attack = base_attack + randi_range(15, max_stat_added)
-		
-		
+
+		#player agiltiy
+		if agility_randomizer < 0.2:
+			player.agility = base_agility + randi_range(0, 4)
+		elif agility_randomizer < 0.4:
+			player.agility = base_agility + randi_range(5, 8)
+		elif agility_randomizer < 0.6:
+			player.agility = base_agility + randi_range(9, 11)
+		elif agility_randomizer < 0.95:
+			player.agility = base_agility + randi_range(11, 14)
+		else:
+			player.agility = base_agility + randi_range(15, max_stat_added)
+
+		#player ball_control
+		if ball_control_randomizer < 0.2:
+			player.ball_control = base_ball_control + randi_range(0, 4)
+		elif attack_randomizer < 0.4:
+			player.ball_control = base_ball_control + randi_range(5, 8)
+		elif attack_randomizer < 0.6:
+			player.ball_control = base_ball_control + randi_range(9, 11)
+		elif attack_randomizer < 0.95:
+			player.ball_control = base_ball_control + randi_range(11, 14)
+		else:
+			player.ball_control = base_ball_control + randi_range(15, max_stat_added)
+
 		#player defend
 		if defend_randomizer < 0.2:
 			player.defend = base_defend + randi_range(0, 4)
@@ -181,7 +208,7 @@ func generate_players(count: int):
 			player.defend = base_defend + randi_range(5, 8)
 		elif defend_randomizer < 0.6:
 			player.defend = base_defend + randi_range(9, 11)
-		elif defend_randomizer < 0.8:
+		elif defend_randomizer < 0.85:
 			player.defend = base_defend + randi_range(11, 14)
 		else:
 			player.defend = base_defend + randi_range(15, max_stat_added)
