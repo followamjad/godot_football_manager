@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_1xuek"]
+
+[resource]
+script = ExtResource("1_1xuek")
+first_name = "Jack"
+last_name = "Byrne"
+full_name = "Jack Byrne"
+age = 26
+height = 179
+position = "Center Back"
+attack = 16
+agility = 14
+shooting = 13
+passing = 15
+speed = 9
+ball_control = 15
+defend = 18
+interception = 11
+goalkeeping = 2

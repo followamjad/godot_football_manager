@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_3psh0"]
+
+[resource]
+script = ExtResource("1_3psh0")
+first_name = "Omar"
+last_name = "Santiago"
+full_name = "Omar Santiago"
+age = 26
+height = 191
+position = "Striker"
+attack = 20
+agility = 10
+shooting = 14
+passing = 2
+speed = 12
+ball_control = 17
+defend = 9
+interception = 10
+goalkeeping = 2

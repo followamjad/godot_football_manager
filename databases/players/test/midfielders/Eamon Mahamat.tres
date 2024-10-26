@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_cinyg"]
+
+[resource]
+script = ExtResource("1_cinyg")
+first_name = "Eamon"
+last_name = "Mahamat"
+full_name = "Eamon Mahamat"
+age = 20
+height = 161
+position = "Midfielder"
+attack = 16
+agility = 4
+shooting = 10
+passing = 9
+speed = 2
+ball_control = 13
+defend = 18
+interception = 16
+goalkeeping = 2

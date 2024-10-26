@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_vmuim"]
+
+[resource]
+script = ExtResource("1_vmuim")
+first_name = "Tyler"
+last_name = "Yamamoto"
+full_name = "Tyler Yamamoto"
+age = 39
+height = 174
+position = "Goalkeeper"
+attack = 12
+agility = 3
+shooting = 16
+passing = 18
+speed = 12
+ball_control = 11
+defend = 11
+interception = 16
+goalkeeping = 18

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_33gst"]
+
+[resource]
+script = ExtResource("1_33gst")
+first_name = "Eric"
+last_name = "Hoffman"
+full_name = "Eric Hoffman"
+age = 49
+height = 225
+position = "Striker"
+attack = 7
+agility = 8
+shooting = 7
+passing = 15
+speed = 6
+ball_control = 8
+defend = 18
+interception = 20
+goalkeeping = 2

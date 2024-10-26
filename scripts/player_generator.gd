@@ -104,7 +104,7 @@ var base_interception: int = 2
 var max_stat_added: int = 18
 
 func _ready() -> void:
-	generate_players(3)
+	generate_players(100)
 
 func generate_players(count: int):
 	for i in range(count):

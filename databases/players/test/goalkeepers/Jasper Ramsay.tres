@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_cwrwa"]
+
+[resource]
+script = ExtResource("1_cwrwa")
+first_name = "Jasper"
+last_name = "Ramsay"
+full_name = "Jasper Ramsay"
+age = 27
+height = 196
+position = "Goalkeeper"
+attack = 15
+agility = 15
+shooting = 19
+passing = 19
+speed = 18
+ball_control = 16
+defend = 2
+interception = 15
+goalkeeping = 18

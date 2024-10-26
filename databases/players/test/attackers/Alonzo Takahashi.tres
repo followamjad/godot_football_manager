@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_airw6"]
+
+[resource]
+script = ExtResource("1_airw6")
+first_name = "Alonzo"
+last_name = "Takahashi"
+full_name = "Alonzo Takahashi"
+age = 22
+height = 205
+position = "Winger"
+attack = 11
+agility = 5
+shooting = 14
+passing = 7
+speed = 8
+ball_control = 13
+defend = 14
+interception = 12
+goalkeeping = 2

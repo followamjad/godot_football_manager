@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_4rjcr"]
+
+[resource]
+script = ExtResource("1_4rjcr")
+first_name = "Ethan"
+last_name = "Amin"
+full_name = "Ethan Amin"
+age = 24
+height = 183
+position = "Winger"
+attack = 3
+agility = 13
+shooting = 4
+passing = 17
+speed = 14
+ball_control = 5
+defend = 7
+interception = 17
+goalkeeping = 2

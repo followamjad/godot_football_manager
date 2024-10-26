@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_jv8di"]
+
+[resource]
+script = ExtResource("1_jv8di")
+first_name = "Jett"
+last_name = "Moreira"
+full_name = "Jett Moreira"
+age = 24
+height = 165
+position = "Goalkeeper"
+attack = 14
+agility = 12
+shooting = 16
+passing = 14
+speed = 13
+ball_control = 2
+defend = 11
+interception = 13
+goalkeeping = 18

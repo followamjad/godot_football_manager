@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_5s5q5"]
+
+[resource]
+script = ExtResource("1_5s5q5")
+first_name = "Musa"
+last_name = "Kim"
+full_name = "Musa Kim"
+age = 22
+height = 151
+position = "Wing Back"
+attack = 11
+agility = 7
+shooting = 13
+passing = 19
+speed = 17
+ball_control = 2
+defend = 11
+interception = 13
+goalkeeping = 2

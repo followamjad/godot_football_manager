@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_0c0m1"]
+
+[resource]
+script = ExtResource("1_0c0m1")
+first_name = "Alois"
+last_name = "Cooper"
+full_name = "Alois Cooper"
+age = 28
+height = 194
+position = "Midfielder"
+attack = 7
+agility = 13
+shooting = 14
+passing = 20
+speed = 11
+ball_control = 4
+defend = 19
+interception = 7
+goalkeeping = 2

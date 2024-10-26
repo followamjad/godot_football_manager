@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_vqr0b"]
+
+[resource]
+script = ExtResource("1_vqr0b")
+first_name = "Shaka"
+last_name = "Bernard"
+full_name = "Shaka Bernard"
+age = 46
+height = 184
+position = "Midfielder"
+attack = 13
+agility = 8
+shooting = 8
+passing = 5
+speed = 7
+ball_control = 11
+defend = 19
+interception = 10
+goalkeeping = 2

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_vdrxy"]
+
+[resource]
+script = ExtResource("1_vdrxy")
+first_name = "James"
+last_name = "Garcia"
+full_name = "James Garcia"
+age = 21
+height = 169
+position = "Midfielder"
+attack = 2
+agility = 16
+shooting = 15
+passing = 15
+speed = 13
+ball_control = 9
+defend = 7
+interception = 12
+goalkeeping = 2

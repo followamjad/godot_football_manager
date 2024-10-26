@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_ljd1x"]
+
+[resource]
+script = ExtResource("1_ljd1x")
+first_name = "Mason"
+last_name = "Rodriguez"
+full_name = "Mason Rodriguez"
+age = 15
+height = 172
+position = "Midfielder"
+attack = 3
+agility = 11
+shooting = 11
+passing = 10
+speed = 4
+ball_control = 8
+defend = 8
+interception = 8
+goalkeeping = 2

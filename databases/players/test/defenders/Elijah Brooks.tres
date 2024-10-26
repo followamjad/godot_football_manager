@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_8u5rs"]
+
+[resource]
+script = ExtResource("1_8u5rs")
+first_name = "Elijah"
+last_name = "Brooks"
+full_name = "Elijah Brooks"
+age = 23
+height = 195
+position = "Center Back"
+attack = 18
+agility = 5
+shooting = 13
+passing = 8
+speed = 14
+ball_control = 18
+defend = 12
+interception = 2
+goalkeeping = 2

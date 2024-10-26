@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_ew6ru"]
+
+[resource]
+script = ExtResource("1_ew6ru")
+first_name = "Jorge"
+last_name = "Ibrahim"
+full_name = "Jorge Ibrahim"
+age = 25
+height = 182
+position = "Center Back"
+attack = 2
+agility = 9
+shooting = 12
+passing = 8
+speed = 11
+ball_control = 2
+defend = 13
+interception = 2
+goalkeeping = 2

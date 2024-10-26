@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_4tg22"]
+
+[resource]
+script = ExtResource("1_4tg22")
+first_name = "Victor"
+last_name = "Graves"
+full_name = "Victor Graves"
+age = 48
+height = 163
+position = "Center Back"
+attack = 13
+agility = 11
+shooting = 14
+passing = 2
+speed = 13
+ball_control = 16
+defend = 13
+interception = 6
+goalkeeping = 2

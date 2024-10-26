@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_5a2vb"]
+
+[resource]
+script = ExtResource("1_5a2vb")
+first_name = "Clement"
+last_name = "Bowers"
+full_name = "Clement Bowers"
+age = 38
+height = 193
+position = "Center Back"
+attack = 9
+agility = 16
+shooting = 3
+passing = 19
+speed = 5
+ball_control = 6
+defend = 12
+interception = 2
+goalkeeping = 2

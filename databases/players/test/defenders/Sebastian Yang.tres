@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_jgd7s"]
+
+[resource]
+script = ExtResource("1_jgd7s")
+first_name = "Sebastian"
+last_name = "Yang"
+full_name = "Sebastian Yang"
+age = 19
+height = 215
+position = "Wing Back"
+attack = 20
+agility = 6
+shooting = 14
+passing = 17
+speed = 12
+ball_control = 13
+defend = 12
+interception = 16
+goalkeeping = 2

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_1bhlp"]
+
+[resource]
+script = ExtResource("1_1bhlp")
+first_name = "Hassan"
+last_name = "Bennett"
+full_name = "Hassan Bennett"
+age = 25
+height = 172
+position = "Striker"
+attack = 13
+agility = 14
+shooting = 13
+passing = 2
+speed = 7
+ball_control = 11
+defend = 18
+interception = 15
+goalkeeping = 2

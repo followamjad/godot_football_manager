@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_byrhd"]
+
+[resource]
+script = ExtResource("1_byrhd")
+first_name = "Sebastian"
+last_name = "Curtis"
+full_name = "Sebastian Curtis"
+age = 22
+height = 193
+position = "Wing Back"
+attack = 15
+agility = 7
+shooting = 3
+passing = 20
+speed = 4
+ball_control = 15
+defend = 16
+interception = 13
+goalkeeping = 2

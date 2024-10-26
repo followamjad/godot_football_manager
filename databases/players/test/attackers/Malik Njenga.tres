@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_onhop"]
+
+[resource]
+script = ExtResource("1_onhop")
+first_name = "Malik"
+last_name = "Njenga"
+full_name = "Malik Njenga"
+age = 25
+height = 212
+position = "Winger"
+attack = 7
+agility = 3
+shooting = 2
+passing = 13
+speed = 6
+ball_control = 9
+defend = 15
+interception = 20
+goalkeeping = 2

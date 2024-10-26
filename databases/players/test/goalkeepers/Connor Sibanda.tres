@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_kihky"]
+
+[resource]
+script = ExtResource("1_kihky")
+first_name = "Connor"
+last_name = "Sibanda"
+full_name = "Connor Sibanda"
+age = 43
+height = 200
+position = "Goalkeeper"
+attack = 20
+agility = 12
+shooting = 11
+passing = 19
+speed = 12
+ball_control = 19
+defend = 9
+interception = 15
+goalkeeping = 17

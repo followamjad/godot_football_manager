@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_niq1o"]
+
+[resource]
+script = ExtResource("1_niq1o")
+first_name = "Samir"
+last_name = "Garrison"
+full_name = "Samir Garrison"
+age = 15
+height = 202
+position = "Center Back"
+attack = 6
+agility = 7
+shooting = 9
+passing = 18
+speed = 2
+ball_control = 7
+defend = 4
+interception = 14
+goalkeeping = 2

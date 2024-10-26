@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_vkp6l"]
+
+[resource]
+script = ExtResource("1_vkp6l")
+first_name = "Levi"
+last_name = "Nguyen"
+full_name = "Levi Nguyen"
+age = 18
+height = 161
+position = "Winger"
+attack = 11
+agility = 12
+shooting = 15
+passing = 7
+speed = 20
+ball_control = 12
+defend = 12
+interception = 6
+goalkeeping = 2

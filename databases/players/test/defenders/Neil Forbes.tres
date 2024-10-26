@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_xtc3q"]
+
+[resource]
+script = ExtResource("1_xtc3q")
+first_name = "Neil"
+last_name = "Forbes"
+full_name = "Neil Forbes"
+age = 32
+height = 174
+position = "Wing Back"
+attack = 6
+agility = 12
+shooting = 5
+passing = 16
+speed = 13
+ball_control = 5
+defend = 10
+interception = 4
+goalkeeping = 2

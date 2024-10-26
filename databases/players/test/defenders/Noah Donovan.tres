@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_25lsr"]
+
+[resource]
+script = ExtResource("1_25lsr")
+first_name = "Noah"
+last_name = "Donovan"
+full_name = "Noah Donovan"
+age = 35
+height = 197
+position = "Center Back"
+attack = 17
+agility = 2
+shooting = 13
+passing = 18
+speed = 8
+ball_control = 13
+defend = 14
+interception = 11
+goalkeeping = 2

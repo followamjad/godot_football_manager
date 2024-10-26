@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_k5g3a"]
+
+[resource]
+script = ExtResource("1_k5g3a")
+first_name = "Randy"
+last_name = "Ramsay"
+full_name = "Randy Ramsay"
+age = 23
+height = 185
+position = "Center Back"
+attack = 17
+agility = 5
+shooting = 9
+passing = 14
+speed = 16
+ball_control = 19
+defend = 13
+interception = 19
+goalkeeping = 2

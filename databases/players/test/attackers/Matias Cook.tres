@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_olgg3"]
+
+[resource]
+script = ExtResource("1_olgg3")
+first_name = "Matias"
+last_name = "Cook"
+full_name = "Matias Cook"
+age = 22
+height = 187
+position = "Winger"
+attack = 8
+agility = 14
+shooting = 12
+passing = 9
+speed = 12
+ball_control = 4
+defend = 11
+interception = 9
+goalkeeping = 2

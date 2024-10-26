@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_0it67"]
+
+[resource]
+script = ExtResource("1_0it67")
+first_name = "Max"
+last_name = "Armstrong"
+full_name = "Max Armstrong"
+age = 40
+height = 194
+position = "Center Back"
+attack = 6
+agility = 16
+shooting = 4
+passing = 7
+speed = 17
+ball_control = 7
+defend = 6
+interception = 13
+goalkeeping = 2

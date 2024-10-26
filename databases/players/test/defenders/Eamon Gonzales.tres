@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_eptow"]
+
+[resource]
+script = ExtResource("1_eptow")
+first_name = "Eamon"
+last_name = "Gonzales"
+full_name = "Eamon Gonzales"
+age = 16
+height = 192
+position = "Wing Back"
+attack = 13
+agility = 20
+shooting = 8
+passing = 17
+speed = 9
+ball_control = 6
+defend = 12
+interception = 19
+goalkeeping = 2

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_y7sev"]
+
+[resource]
+script = ExtResource("1_y7sev")
+first_name = "Noah"
+last_name = "Farah"
+full_name = "Noah Farah"
+age = 20
+height = 163
+position = "Midfielder"
+attack = 14
+agility = 4
+shooting = 6
+passing = 12
+speed = 4
+ball_control = 13
+defend = 11
+interception = 13
+goalkeeping = 2

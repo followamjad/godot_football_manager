@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_g2ntw"]
+
+[resource]
+script = ExtResource("1_g2ntw")
+first_name = "Mateus"
+last_name = "Rollins"
+full_name = "Mateus Rollins"
+age = 25
+height = 192
+position = "Wing Back"
+attack = 17
+agility = 5
+shooting = 11
+passing = 16
+speed = 12
+ball_control = 18
+defend = 17
+interception = 10
+goalkeeping = 2

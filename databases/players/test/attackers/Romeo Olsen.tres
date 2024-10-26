@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_lrdd1"]
+
+[resource]
+script = ExtResource("1_lrdd1")
+first_name = "Romeo"
+last_name = "Olsen"
+full_name = "Romeo Olsen"
+age = 19
+height = 168
+position = "Winger"
+attack = 13
+agility = 18
+shooting = 11
+passing = 13
+speed = 14
+ball_control = 12
+defend = 16
+interception = 13
+goalkeeping = 2

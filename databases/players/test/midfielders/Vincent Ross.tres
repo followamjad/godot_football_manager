@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_vphbg"]
+
+[resource]
+script = ExtResource("1_vphbg")
+first_name = "Vincent"
+last_name = "Ross"
+full_name = "Vincent Ross"
+age = 17
+height = 155
+position = "Midfielder"
+attack = 8
+agility = 12
+shooting = 13
+passing = 14
+speed = 15
+ball_control = 6
+defend = 7
+interception = 14
+goalkeeping = 2

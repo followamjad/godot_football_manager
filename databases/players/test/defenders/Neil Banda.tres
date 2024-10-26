@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_mux4g"]
+
+[resource]
+script = ExtResource("1_mux4g")
+first_name = "Neil"
+last_name = "Banda"
+full_name = "Neil Banda"
+age = 26
+height = 209
+position = "Center Back"
+attack = 13
+agility = 13
+shooting = 3
+passing = 14
+speed = 3
+ball_control = 12
+defend = 8
+interception = 10
+goalkeeping = 2

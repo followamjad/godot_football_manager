@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_ttn3u"]
+
+[resource]
+script = ExtResource("1_ttn3u")
+first_name = "Ezra"
+last_name = "Ali"
+full_name = "Ezra Ali"
+age = 25
+height = 165
+position = "Winger"
+attack = 7
+agility = 9
+shooting = 3
+passing = 19
+speed = 13
+ball_control = 9
+defend = 10
+interception = 9
+goalkeeping = 2

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_650vr"]
+
+[resource]
+script = ExtResource("1_650vr")
+first_name = "Khalid"
+last_name = "Ahmed"
+full_name = "Khalid Ahmed"
+age = 23
+height = 192
+position = "Goalkeeper"
+attack = 16
+agility = 10
+shooting = 5
+passing = 15
+speed = 13
+ball_control = 15
+defend = 13
+interception = 5
+goalkeeping = 18

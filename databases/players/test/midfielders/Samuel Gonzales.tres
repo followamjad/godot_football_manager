@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_qk0g4"]
+
+[resource]
+script = ExtResource("1_qk0g4")
+first_name = "Samuel"
+last_name = "Gonzales"
+full_name = "Samuel Gonzales"
+age = 39
+height = 190
+position = "Midfielder"
+attack = 16
+agility = 13
+shooting = 18
+passing = 14
+speed = 18
+ball_control = 2
+defend = 3
+interception = 15
+goalkeeping = 2

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_nfp0g"]
+
+[resource]
+script = ExtResource("1_nfp0g")
+first_name = "Femi"
+last_name = "Jenkins"
+full_name = "Femi Jenkins"
+age = 22
+height = 186
+position = "Wing Back"
+attack = 10
+agility = 18
+shooting = 12
+passing = 12
+speed = 4
+ball_control = 9
+defend = 11
+interception = 3
+goalkeeping = 2

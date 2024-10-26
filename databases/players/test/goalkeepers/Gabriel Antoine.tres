@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_hlylr"]
+
+[resource]
+script = ExtResource("1_hlylr")
+first_name = "Gabriel"
+last_name = "Antoine"
+full_name = "Gabriel Antoine"
+age = 47
+height = 187
+position = "Goalkeeper"
+attack = 6
+agility = 12
+shooting = 3
+passing = 15
+speed = 12
+ball_control = 9
+defend = 11
+interception = 11
+goalkeeping = 12

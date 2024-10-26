@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_n5hsi"]
+
+[resource]
+script = ExtResource("1_n5hsi")
+first_name = "Victor"
+last_name = "Cruz"
+full_name = "Victor Cruz"
+age = 39
+height = 192
+position = "Wing Back"
+attack = 15
+agility = 10
+shooting = 5
+passing = 8
+speed = 4
+ball_control = 16
+defend = 9
+interception = 16
+goalkeeping = 2

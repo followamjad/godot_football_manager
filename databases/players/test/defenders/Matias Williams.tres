@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_5ux73"]
+
+[resource]
+script = ExtResource("1_5ux73")
+first_name = "Matias"
+last_name = "Williams"
+full_name = "Matias Williams"
+age = 27
+height = 189
+position = "Wing Back"
+attack = 17
+agility = 16
+shooting = 16
+passing = 14
+speed = 14
+ball_control = 14
+defend = 12
+interception = 11
+goalkeeping = 2

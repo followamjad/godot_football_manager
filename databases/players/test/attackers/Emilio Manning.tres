@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_i04io"]
+
+[resource]
+script = ExtResource("1_i04io")
+first_name = "Emilio"
+last_name = "Manning"
+full_name = "Emilio Manning"
+age = 27
+height = 188
+position = "Striker"
+attack = 2
+agility = 13
+shooting = 16
+passing = 19
+speed = 14
+ball_control = 10
+defend = 7
+interception = 12
+goalkeeping = 2
