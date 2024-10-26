@@ -1,8 +1,13 @@
-[gd_resource type="Resource" script_class="club_data" load_steps=4 format=3 uid="uid://cjqhmtaba5n3y"]
+[gd_resource type="Resource" script_class="club_data" load_steps=9 format=3 uid="uid://cjqhmtaba5n3y"]
 
 [ext_resource type="Script" path="res://scripts/player_data.gd" id="1_rvsfo"]
 [ext_resource type="Texture2D" uid="uid://02oh5n28ui3x" path="res://art/funny guy club.png" id="2_hh6n4"]
 [ext_resource type="Script" path="res://scripts/club_data.gd" id="2_n08nw"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Omar Santiago.tres" id="2_yg40q"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Elijah Brooks.tres" id="4_dlapp"]
+[ext_resource type="Resource" path="res://databases/players/test/goalkeepers/Khalid Ahmed.tres" id="5_ttg6i"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Malik Douglas.tres" id="6_844xy"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Noah Farah.tres" id="7_ay0j4"]
 
 [resource]
 script = ExtResource("2_n08nw")
@@ -10,7 +15,10 @@ club_name = "Funny Guy FC"
 manager_name = "Jesse Mokerde"
 club_short_name = "FGFC"
 club_logo = ExtResource("2_hh6n4")
-goalkeepers = Array[ExtResource("1_rvsfo")]([])
-defenders = Array[ExtResource("1_rvsfo")]([])
-midfielders = Array[ExtResource("1_rvsfo")]([])
-attackers = Array[ExtResource("1_rvsfo")]([])
+attack_power = 0
+defend_power = 0
+passing_power = 0
+goalkeepers = Array[ExtResource("1_rvsfo")]([ExtResource("5_ttg6i")])
+defenders = Array[ExtResource("1_rvsfo")]([ExtResource("4_dlapp")])
+midfielders = Array[ExtResource("1_rvsfo")]([ExtResource("6_844xy"), ExtResource("7_ay0j4")])
+attackers = Array[ExtResource("1_rvsfo")]([ExtResource("2_yg40q")])

@@ -8,7 +8,7 @@ class_name club_data
 @export var club_logo : Texture2D
 
 @export_category("Match Info")
-var attack_power: int = 0:
+@export var attack_power: int = 0:
 	get:
 		var attackers_attack_power_array: Array[int] = []
 		var midfielders_attack_power_array: Array[int] = []
@@ -35,7 +35,7 @@ var attack_power: int = 0:
 	# calculate everything
 		return (0.6 * (attackers_attack_power / attackers_attack_power_array.size())) + (0.3 * (midfielders_attack_power / midfielders_attack_power_array.size())) + (0.1 * (defenders_attack_power / defenders_attack_power_array.size()))
 
-var defend_power: int:
+@export var defend_power: int:
 	get:
 		var attackers_defend_power_array: Array[int] = []
 		var midfielders_defend_power_array: Array[int] = []
@@ -62,7 +62,7 @@ var defend_power: int:
 	# calculate everything
 		return (0.1 * (attackers_defend_power / attackers_defend_power_array.size())) + (0.3 * (midfielders_defend_power / midfielders_defend_power_array.size())) + (0.6 * (defenders_defend_power / defenders_defend_power_array.size()))
 
-var passing_power: int:
+@export var passing_power: int:
 	get:
 		var attackers_passing_power_array: Array[int] = []
 		var midfielders_passing_power_array: Array[int] = []

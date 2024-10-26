@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhl6824xxrg21"]
+[gd_scene load_steps=10 format=3 uid="uid://dhl6824xxrg21"]
 
 [ext_resource type="Script" path="res://scripts/game_handler.gd" id="1_bujfv"]
 [ext_resource type="FontFile" uid="uid://doueaoje5s4tr" path="res://font/Minecraft.ttf" id="1_rhirp"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bmaih67la6mu8" path="res://art/evil guy club.png" id="2_bhmbu"]
 [ext_resource type="Resource" uid="uid://cjqhmtaba5n3y" path="res://databases/club/funny_guy_fc.tres" id="3_j7004"]
 [ext_resource type="PackedScene" uid="uid://c6jus6u7yx5ab" path="res://scenes/match_feed_label.tscn" id="4_406yp"]
+[ext_resource type="PackedScene" uid="uid://cn2gtufsjbcbi" path="res://scenes/home_scoreboard_label.tscn" id="6_ma2b7"]
+[ext_resource type="PackedScene" uid="uid://dkeurkg8njboa" path="res://scenes/time_scoreboard_label.tscn" id="7_7tq4j"]
+[ext_resource type="PackedScene" uid="uid://dxxw7sfsglt06" path="res://scenes/away_scoreboard_label.tscn" id="8_ufhie"]
 
 [node name="match_screen" type="Node2D"]
 
@@ -160,45 +163,22 @@ layout_mode = 2
 custom_minimum_size = Vector2(136, 0)
 layout_mode = 2
 
-[node name="home_scoreboard_label" type="Label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/home_scoreboard_container"]
+[node name="home_scoreboard_label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/home_scoreboard_container" instance=ExtResource("6_ma2b7")]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/font = ExtResource("1_rhirp")
-text = "asdasdasdasdasdasd"
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
 
 [node name="time_scoreboard_container" type="VBoxContainer" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer"]
 custom_minimum_size = Vector2(24, 0)
 layout_mode = 2
 
-[node name="time_scoreboard_label" type="Label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/time_scoreboard_container"]
+[node name="time_scoreboard_label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/time_scoreboard_container" instance=ExtResource("7_7tq4j")]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/font = ExtResource("1_rhirp")
-text = "88'"
-horizontal_alignment = 1
-vertical_alignment = 1
-text_overrun_behavior = 3
 
 [node name="away_scoreboard_container" type="VBoxContainer" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer"]
 custom_minimum_size = Vector2(136, 0)
 layout_mode = 2
 
-[node name="away_scoreboard_label" type="Label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/away_scoreboard_container"]
+[node name="away_scoreboard_label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/away_scoreboard_container" instance=ExtResource("8_ufhie")]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/font = ExtResource("1_rhirp")
-text = "asdsdasdasdasdasdas"
-vertical_alignment = 1
-text_overrun_behavior = 3
 
 [node name="match_feed_container" type="ScrollContainer" parent="game_handler/CanvasLayer"]
 anchors_preset = -1
@@ -293,11 +273,8 @@ focus_mode = 0
 text = "away attack"
 
 [node name="second_timer" type="Timer" parent="game_handler"]
-wait_time = 0.07
-
-[node name="feed_timer" type="Timer" parent="game_handler"]
-wait_time = 0.5
-one_shot = true
+process_callback = 0
+wait_time = 0.06
 
 [connection signal="button_up" from="game_handler/CanvasLayer/button_container/start_match_button" to="game_handler" method="_on_start_match_button_button_up"]
 [connection signal="button_up" from="game_handler/CanvasLayer/button_container/pause_match_button" to="game_handler" method="_on_pause_match_button_button_up"]

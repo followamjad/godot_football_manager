@@ -1,8 +1,13 @@
-[gd_resource type="Resource" script_class="club_data" load_steps=4 format=3 uid="uid://dt2ysv2fkd36"]
+[gd_resource type="Resource" script_class="club_data" load_steps=9 format=3 uid="uid://dt2ysv2fkd36"]
 
 [ext_resource type="Script" path="res://scripts/player_data.gd" id="1_jx1qu"]
 [ext_resource type="Script" path="res://scripts/club_data.gd" id="2_tup5s"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Alonzo Takahashi.tres" id="2_uav6e"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Brian Fisher.tres" id="4_n16p4"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Earl Davidson.tres" id="5_3niad"]
 [ext_resource type="Texture2D" uid="uid://bmaih67la6mu8" path="res://art/evil guy club.png" id="5_d0rp7"]
+[ext_resource type="Resource" path="res://databases/players/test/goalkeepers/Gabriel Antoine.tres" id="6_1pux8"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Ferdinand Armstrong.tres" id="7_hi1u0"]
 
 [resource]
 script = ExtResource("2_tup5s")
@@ -10,7 +15,10 @@ club_name = "Evil Guy FC"
 manager_name = "Joseph Mariano"
 club_short_name = "EVFC"
 club_logo = ExtResource("5_d0rp7")
-goalkeepers = Array[ExtResource("1_jx1qu")]([])
-defenders = Array[ExtResource("1_jx1qu")]([])
-midfielders = Array[ExtResource("1_jx1qu")]([])
-attackers = Array[ExtResource("1_jx1qu")]([])
+attack_power = 0
+defend_power = 0
+passing_power = 0
+goalkeepers = Array[ExtResource("1_jx1qu")]([ExtResource("6_1pux8")])
+defenders = Array[ExtResource("1_jx1qu")]([ExtResource("4_n16p4"), ExtResource("5_3niad")])
+midfielders = Array[ExtResource("1_jx1qu")]([ExtResource("7_hi1u0")])
+attackers = Array[ExtResource("1_jx1qu")]([ExtResource("2_uav6e")])

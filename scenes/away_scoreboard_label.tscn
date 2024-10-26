@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxxw7sfsglt06"]
+
+[ext_resource type="FontFile" uid="uid://doueaoje5s4tr" path="res://font/Minecraft.ttf" id="1_cx1r6"]
+
+[node name="away_scoreboard_label" type="Label"]
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("1_cx1r6")
+text = "asdsdasdasdasdasdas"
+vertical_alignment = 1
+text_overrun_behavior = 3
