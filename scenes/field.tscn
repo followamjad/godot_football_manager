@@ -23,11 +23,12 @@ grow_horizontal = 2
 alignment = 1
 
 [node name="current_time_minute_label" type="Label" parent="game_handler/CanvasLayer/current_time_container"]
+custom_minimum_size = Vector2(24, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_rhirp")
 theme_override_font_sizes/font_size = 16
-text = "88"
-horizontal_alignment = 1
+text = "00"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="static_label" type="Label" parent="game_handler/CanvasLayer/current_time_container"]
@@ -39,11 +40,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="current_time_second_label" type="Label" parent="game_handler/CanvasLayer/current_time_container"]
+custom_minimum_size = Vector2(24, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_rhirp")
 theme_override_font_sizes/font_size = 16
-text = "88"
-horizontal_alignment = 1
+text = "00"
 vertical_alignment = 1
 
 [node name="home_club_logo" type="TextureRect" parent="game_handler/CanvasLayer"]
@@ -262,6 +263,7 @@ custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("1_rhirp")
 text = "Match Stats"
 text_overrun_behavior = 3
@@ -271,17 +273,33 @@ custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("1_rhirp")
 text = "Kick-off"
 text_overrun_behavior = 3
+
+[node name="pause_match_button" type="Button" parent="game_handler/CanvasLayer/button_container"]
+visible = false
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "Pause"
 
 [node name="exit_match_button" type="Button" parent="game_handler/CanvasLayer/button_container"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_fonts/font = ExtResource("1_rhirp")
 text = "Exit"
 text_overrun_behavior = 3
 
+[node name="second_timer" type="Timer" parent="game_handler"]
+wait_time = 0.07
+
 [connection signal="button_up" from="game_handler/CanvasLayer/button_container/start_match_button" to="game_handler" method="_on_start_match_button_button_up"]
+[connection signal="button_up" from="game_handler/CanvasLayer/button_container/pause_match_button" to="game_handler" method="_on_pause_match_button_button_up"]
+[connection signal="button_up" from="game_handler/CanvasLayer/button_container/exit_match_button" to="game_handler" method="_on_exit_match_button_button_up"]
+[connection signal="timeout" from="game_handler/second_timer" to="game_handler" method="_on_second_timer_timeout"]
