@@ -94,3 +94,14 @@ class_name club_data
 @export var defenders: Array[player_data]
 @export var midfielders: Array[player_data]
 @export var attackers: Array[player_data]
+
+@export var field_player: Array[player_data]:
+	get:
+		var add_field_player: Array[player_data]
+		for attacker in attackers:
+			add_field_player.append(attacker)
+		for defender in defenders:
+			add_field_player.append(defender)
+		for midfielder in midfielders:
+			add_field_player.append(midfielder)
+		return add_field_player

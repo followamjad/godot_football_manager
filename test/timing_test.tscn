@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgn806nmk13r"]
+
+[ext_resource type="Script" path="res://timing_test.gd" id="1_uue8g"]
+
+[node name="timing_test" type="Node2D"]
+script = ExtResource("1_uue8g")
+
+[node name="word_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="add_child_timer" type="Timer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 146.0
+offset_top = 42.0
+offset_right = 568.0
+offset_bottom = 452.0
+
+[connection signal="timeout" from="word_timer" to="." method="_on_word_timer_timeout"]
+[connection signal="timeout" from="add_child_timer" to="." method="_on_add_child_timer_timeout"]

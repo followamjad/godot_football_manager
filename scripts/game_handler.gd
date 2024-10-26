@@ -11,17 +11,11 @@ var is_match_started: bool = false
 var is_match_paused: bool = false
 var is_second_half: bool = false
 var playing_team: Array[club_data] = []
-var home_team_players: Array[player_data] = []
-var home_team_fielders: Array[player_data] = []
-var home_team_attackers: Array[player_data] = []
-var home_team_defenders: Array[player_data] = []
-var away_team_players: Array[player_data] = []
-var away_team_fielders: Array[player_data] = []
-var away_team_attackers: Array[player_data] = []
-var away_team_defenders: Array[player_data] = []
 var game_starter: club_data
 var on_possesion: club_data
 var player_on_possesion : player_data
+var match_feed_to_be_generated: Array[String] = []
+var match_feed_generation_index: int = 0
 
 # onreadys
 @onready var home_club_logo: TextureRect = $CanvasLayer/home_club_logo
@@ -38,6 +32,7 @@ var player_on_possesion : player_data
 @onready var second_timer: Timer = $second_timer
 @onready var start_match_button: Button = $CanvasLayer/button_container/start_match_button
 @onready var pause_match_button: Button = $CanvasLayer/button_container/pause_match_button
+@onready var match_feed_timer: Timer = $match_feed_timer
 
 # const
 const MATCH_FEED_LABEL = preload("res://scenes/match_feed_label.tscn")
@@ -45,15 +40,18 @@ const AWAY_SCOREBOARD_LABEL = preload("res://scenes/away_scoreboard_label.tscn")
 const HOME_SCOREBOARD_LABEL = preload("res://scenes/home_scoreboard_label.tscn")
 const TIME_SCOREBOARD_LABEL = preload("res://scenes/time_scoreboard_label.tscn")
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	playing_team.append(home_club)
-	playing_team.append(away_club)
+	handle_team()
+	clear_container()
+
+func clear_container():
 	for children in match_feed_label_container.get_children():
 		match_feed_label_container.remove_child(children)
 		children.queue_free()
 
+func update_match_feed():
+	match_feed_timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -64,35 +62,35 @@ func _process(delta: float) -> void:
 			current_time_second_label.text = "0" + str(current_match_time_seconds)
 		else:
 			current_time_second_label.text = str(current_match_time_seconds)
-		
+
 		# minute label handler
 		if current_match_time_minutes < 10:
 			current_time_minute_label.text = "0" + str(current_match_time_minutes)
 		else:
 			current_time_minute_label.text = str(current_match_time_minutes)
-		
+
 		# time adder
 		if current_match_time_seconds == 60 and current_match_time_minutes < 40:
 			current_match_time_seconds = 0
 			current_match_time_minutes += 1
-		
+
 		if not is_second_half:
 			if current_match_time_minutes == 20:
-				var match_feed_half_time = MATCH_FEED_LABEL.instantiate()
-				match_feed_half_time.text = str(current_match_time_minutes) + "' " + "It's Halftime, " + str(home_score) + " - " + str(away_score)
-				match_feed_label_container.add_child(match_feed_half_time)
+				var match_feed_half_time:String
+				match_feed_half_time = str(current_match_time_minutes) + "' " + "It's Halftime, " + str(home_score) + " - " + str(away_score)
+				match_feed_to_be_generated.append(match_feed_half_time)
 				pause()
 				is_second_half = true
 				current_time_minute_label.text = str(current_match_time_minutes)
 				current_time_second_label.text = "0" + str(current_match_time_seconds)
-	
+
 		if current_match_time_minutes == 40:
 			second_timer.stop()
 			current_time_minute_label.text = str(current_match_time_minutes)
 			current_time_second_label.text = "0" + str(current_match_time_seconds)
-			var match_feed_full_time = MATCH_FEED_LABEL.instantiate()
-			match_feed_full_time.text = str(current_match_time_minutes) + "' " + "Match ended. " + str(home_score) + " - " + str(away_score)
-			match_feed_label_container.add_child(match_feed_full_time)
+			var match_feed_full_time : String
+			match_feed_full_time = str(current_match_time_minutes) + "' " + "Match ended. " + str(home_score) + " - " + str(away_score)
+			match_feed_to_be_generated.append(match_feed_full_time)
 			pause_match_button.disabled = true
 			is_match_started = false
 
@@ -105,29 +103,29 @@ func _process(delta: float) -> void:
 
 func kick_off():
 	flip_coin()
-	var kick_off_taker: player_data
+	var kick_off_taker: player_data = game_starter.field_player[randi() % game_starter.field_player.size()]
+	var match_feed_kick_off: String
+	match_feed_kick_off = str(current_match_time_minutes) + "' " + str(kick_off_taker.full_name) + " kicked the ball off"
 	is_match_started = true
 	current_match_time_minutes = 0
 	current_match_time_seconds = 0
+	match_feed_to_be_generated.append(match_feed_kick_off)
 	second_timer.start()
+	update_match_feed()
 
 func flip_coin():
 	game_starter = playing_team[randi() % playing_team.size()]
-	var match_feed_ref_is_flipping_coin = MATCH_FEED_LABEL.instantiate()
-	var match_feed_who_start_game = MATCH_FEED_LABEL.instantiate()
-	match_feed_ref_is_flipping_coin.text = str(current_match_time_minutes) + "'" + " Referee is flipping coin"
-	match_feed_who_start_game.text = str(current_match_time_minutes) + "' " + str(game_starter.club_name) + " will start the game"
-	match_feed_label_container.add_child(match_feed_ref_is_flipping_coin)
-	match_feed_label_container.add_child(match_feed_who_start_game)
+	var match_feed_ref_is_flipping_coin: String
+	var match_feed_who_start_game: String
+	match_feed_ref_is_flipping_coin = str(current_match_time_minutes) + "'" + " Referee is flipping coin"
+	match_feed_who_start_game = str(current_match_time_minutes) + "' " + str(game_starter.club_name) + " will start the game"
+	match_feed_to_be_generated.append(match_feed_ref_is_flipping_coin)
+	match_feed_to_be_generated.append(match_feed_who_start_game)
 	on_possesion = game_starter
 
-func change_possesion(player: player_data, how_he_take_ball: String):
-	player_on_possesion = player
-	var match_feed_possesion_changed = MATCH_FEED_LABEL.instantiate()
-	match_feed_possesion_changed.text = str(current_match_time_minutes) + "' " + player.full_name + " " + how_he_take_ball
-
 func handle_team():
-	pass
+	playing_team.append(home_club)
+	playing_team.append(away_club)
 
 #screen updater
 
@@ -144,7 +142,6 @@ func pause():
 	is_match_paused = true
 	second_timer.paused = true
 	pause_match_button.text = "Resume"
-	
 
 #button functions
 func resume():
@@ -176,3 +173,10 @@ func _on_home_attack_debug_pressed() -> void:
 
 func _on_away_attack_debug_pressed() -> void:
 	pass # Replace with function body.
+
+func _on_match_feed_timer_timeout() -> void:
+	if match_feed_generation_index < match_feed_to_be_generated.size():
+		var generate_match_feed = MATCH_FEED_LABEL.instantiate()
+		generate_match_feed.text = str(match_feed_to_be_generated[match_feed_generation_index])
+		match_feed_label_container.add_child(generate_match_feed)
+		match_feed_generation_index += 1
