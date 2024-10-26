@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_l0l3x"]
+
+[resource]
+script = ExtResource("1_l0l3x")
+first_name = "Cole"
+last_name = "Muller"
+full_name = "Cole Muller"
+age = 35
+height = 170
+position = "Goalkeeper"
+attack = 2
+passing = 18
+speed = 12
+defend = 12
+goalkeeping = 18

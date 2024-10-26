@@ -1,0 +1,287 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhl6824xxrg21"]
+
+[ext_resource type="Script" path="res://scripts/game_handler.gd" id="1_bujfv"]
+[ext_resource type="FontFile" uid="uid://doueaoje5s4tr" path="res://font/Minecraft.ttf" id="1_rhirp"]
+[ext_resource type="Texture2D" uid="uid://bmaih67la6mu8" path="res://art/evil guy club.png" id="2_bhmbu"]
+
+[node name="match_screen" type="Node2D"]
+
+[node name="game_handler" type="Node2D" parent="."]
+script = ExtResource("1_bujfv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="game_handler"]
+
+[node name="current_time_container" type="HBoxContainer" parent="game_handler/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_top = 6.0
+offset_right = 122.0
+offset_bottom = 34.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="current_time_minute_label" type="Label" parent="game_handler/CanvasLayer/current_time_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+theme_override_font_sizes/font_size = 16
+text = "88"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="static_label" type="Label" parent="game_handler/CanvasLayer/current_time_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+theme_override_font_sizes/font_size = 16
+text = ":"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="current_time_second_label" type="Label" parent="game_handler/CanvasLayer/current_time_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+theme_override_font_sizes/font_size = 16
+text = "88"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="home_club_logo" type="TextureRect" parent="game_handler/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 45.0
+offset_right = -50.0
+offset_bottom = 85.0
+grow_horizontal = 2
+pivot_offset = Vector2(87, 18)
+texture = ExtResource("2_bhmbu")
+
+[node name="home_club_name_label" type="Label" parent="game_handler/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(357, 13)
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "adsasdasd"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="away_club_logo" type="TextureRect" parent="game_handler/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 90.0
+offset_bottom = 85.0
+grow_horizontal = 2
+pivot_offset = Vector2(-53, 18)
+texture = ExtResource("2_bhmbu")
+
+[node name="away_club_name_label" type="Label" parent="game_handler/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 360.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(-103, 13)
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "adsasdasd"
+vertical_alignment = 1
+
+[node name="score_label" type="Label" parent="game_handler/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.0
+offset_top = 42.0
+offset_right = 37.0
+offset_bottom = 90.0
+grow_horizontal = 2
+pivot_offset = Vector2(34, 21)
+theme_override_fonts/font = ExtResource("1_rhirp")
+theme_override_font_sizes/font_size = 32
+text = "0 - 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="scoreboard_container" type="ScrollContainer" parent="game_handler/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.254
+anchor_right = 0.5
+anchor_bottom = 0.254
+offset_left = -136.0
+offset_top = -19.92
+offset_right = 136.0
+offset_bottom = 42.08
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_handler/CanvasLayer/scoreboard_container"]
+layout_mode = 2
+
+[node name="home_scoreboard_container" type="VBoxContainer" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+
+[node name="home_scoreboard_label" type="Label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/home_scoreboard_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "asdasdasdasdasdasd"
+horizontal_alignment = 2
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="time_scoreboard_container" type="VBoxContainer" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer"]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+
+[node name="time_scoreboard_label" type="Label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/time_scoreboard_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "88'"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="away_scoreboard_container" type="VBoxContainer" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+
+[node name="away_scoreboard_label" type="Label" parent="game_handler/CanvasLayer/scoreboard_container/HBoxContainer/away_scoreboard_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "asdsdasdasdasdasdas"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="match_feed_container" type="ScrollContainer" parent="game_handler/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.324
+anchor_top = 0.419
+anchor_right = 0.676
+anchor_bottom = 0.81
+offset_left = -0.280029
+offset_top = -0.12001
+offset_right = 0.279938
+offset_bottom = 0.199951
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="match_feed_label_container" type="VBoxContainer" parent="game_handler/CanvasLayer/match_feed_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="match_feed_label" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "1' Funny Guy Club trying to attack"
+autowrap_mode = 2
+
+[node name="match_feed_label2" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "4' Evil Guy Club keeps the ball safe"
+autowrap_mode = 2
+
+[node name="match_feed_label3" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "5' Evil Guy Club counter-attack"
+autowrap_mode = 2
+
+[node name="match_feed_label4" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "7' Evil Guy Club scores"
+autowrap_mode = 2
+
+[node name="match_feed_label5" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "7' The refs are checking VAR"
+autowrap_mode = 2
+
+[node name="match_feed_label6" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "7' Goal was credited"
+autowrap_mode = 2
+
+[node name="match_feed_label7" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "8' Funny Guy Club kick-off"
+autowrap_mode = 2
+
+[node name="match_feed_label8" type="Label" parent="game_handler/CanvasLayer/match_feed_container/match_feed_label_container"]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "11' Funny Guy Club attack from wide"
+autowrap_mode = 2
+
+[node name="button_container" type="HBoxContainer" parent="game_handler/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.804
+anchor_right = 0.5
+anchor_bottom = 0.892
+offset_left = -247.0
+offset_top = 29.08
+offset_right = 247.0
+offset_bottom = 28.84
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="stats_button" type="Button" parent="game_handler/CanvasLayer/button_container"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "Match Stats"
+text_overrun_behavior = 3
+
+[node name="start_match_button" type="Button" parent="game_handler/CanvasLayer/button_container"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "Kick-off"
+text_overrun_behavior = 3
+
+[node name="exit_match_button" type="Button" parent="game_handler/CanvasLayer/button_container"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_rhirp")
+text = "Exit"
+text_overrun_behavior = 3
+
+[connection signal="button_up" from="game_handler/CanvasLayer/button_container/start_match_button" to="game_handler" method="_on_start_match_button_button_up"]

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="club_data" load_steps=15 format=3 uid="uid://dt2ysv2fkd36"]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_jx1qu"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Beau Ochoa.tres" id="2_onnbb"]
+[ext_resource type="Script" path="res://scripts/club_data.gd" id="2_tup5s"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Cole Hansen.tres" id="3_ejy7a"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Ilias Ramsay.tres" id="4_h8b4c"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Aslam Ochoa.tres" id="5_cl88a"]
+[ext_resource type="Texture2D" uid="uid://bmaih67la6mu8" path="res://art/evil guy club.png" id="5_d0rp7"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Brandon Silva.tres" id="6_kanaj"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Kaden Yildirim.tres" id="7_7vc52"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Mohamed Lopez.tres" id="8_d2jvm"]
+[ext_resource type="Resource" path="res://databases/players/test/goalkeepers/Tadeo Diop.tres" id="9_xpdeo"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Gustav Rodriguez.tres" id="10_fqa86"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Galen Evans.tres" id="12_c7038"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Xander Carson.tres" id="13_nbuj2"]
+
+[resource]
+script = ExtResource("2_tup5s")
+club_name = "Evil Guy FC"
+manager_name = "Joseph Mariano"
+club_short_name = "EVFC"
+club_logo = ExtResource("5_d0rp7")
+goalkeepers = Array[ExtResource("1_jx1qu")]([ExtResource("9_xpdeo")])
+defenders = Array[ExtResource("1_jx1qu")]([ExtResource("5_cl88a"), ExtResource("6_kanaj"), ExtResource("7_7vc52"), ExtResource("8_d2jvm")])
+midfielders = Array[ExtResource("1_jx1qu")]([ExtResource("10_fqa86"), ExtResource("12_c7038"), ExtResource("13_nbuj2")])
+attackers = Array[ExtResource("1_jx1qu")]([ExtResource("2_onnbb"), ExtResource("3_ejy7a"), ExtResource("4_h8b4c")])

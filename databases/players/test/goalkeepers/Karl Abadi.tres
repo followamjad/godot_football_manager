@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_q8swg"]
+
+[resource]
+script = ExtResource("1_q8swg")
+first_name = "Karl"
+last_name = "Abadi"
+full_name = "Karl Abadi"
+age = 26
+height = 150
+position = "Goalkeeper"
+attack = 18
+passing = 16
+speed = 13
+defend = 20
+goalkeeping = 19

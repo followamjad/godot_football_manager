@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3 uid="uid://cls0srys6ncyk"]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_8pgrf"]
+
+[resource]
+script = ExtResource("1_8pgrf")
+first_name = "Kung"
+last_name = "Kung"
+full_name = "Kung Kung"
+age = 21
+height = 178
+position = "Attacker"
+attack = 18
+passing = 13
+speed = 15
+defend = 5
+goalkeeper = 2

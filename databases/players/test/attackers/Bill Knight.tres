@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_s1mvw"]
+
+[resource]
+script = ExtResource("1_s1mvw")
+first_name = "Bill"
+last_name = "Knight"
+full_name = "Bill Knight"
+age = 23
+height = 214
+position = "Winger"
+attack = 11
+passing = 9
+speed = 8
+defend = 9
+goalkeeping = 2

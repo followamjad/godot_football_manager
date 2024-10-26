@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_f7pv4"]
+
+[resource]
+script = ExtResource("1_f7pv4")
+first_name = "Ahmed"
+last_name = "Dubois"
+full_name = "Ahmed Dubois"
+age = 28
+height = 196
+position = "Winger"
+attack = 12
+passing = 6
+speed = 11
+defend = 9
+goalkeeping = 2

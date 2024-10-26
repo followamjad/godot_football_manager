@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_cbjya"]
+
+[resource]
+script = ExtResource("1_cbjya")
+first_name = "Timothy"
+last_name = "Kovac"
+full_name = "Timothy Kovac"
+age = 19
+height = 205
+position = "Striker"
+attack = 8
+passing = 9
+speed = 5
+defend = 18
+goalkeeping = 2

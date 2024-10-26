@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_6pni0"]
+
+[resource]
+script = ExtResource("1_6pni0")
+first_name = "Logan"
+last_name = "Goodman"
+full_name = "Logan Goodman"
+age = 28
+height = 204
+position = "Midfielder"
+attack = 4
+passing = 15
+speed = 14
+defend = 13
+goalkeeping = 2

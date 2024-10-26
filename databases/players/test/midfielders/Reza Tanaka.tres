@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_qh2ud"]
+
+[resource]
+script = ExtResource("1_qh2ud")
+first_name = "Reza"
+last_name = "Tanaka"
+full_name = "Reza Tanaka"
+age = 17
+height = 211
+position = "Midfielder"
+attack = 3
+passing = 17
+speed = 2
+defend = 19
+goalkeeping = 2

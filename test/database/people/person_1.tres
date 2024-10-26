@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="People" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://test/people_resource.gd" id="1_ad0tb"]
+
+[resource]
+script = ExtResource("1_ad0tb")
+name = "Amjad"
+age = 25
+height = 171
+weight = 130

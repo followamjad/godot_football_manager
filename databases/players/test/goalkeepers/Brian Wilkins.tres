@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_exe16"]
+
+[resource]
+script = ExtResource("1_exe16")
+first_name = "Brian"
+last_name = "Wilkins"
+full_name = "Brian Wilkins"
+age = 25
+height = 196
+position = "Goalkeeper"
+attack = 17
+passing = 15
+speed = 14
+defend = 16
+goalkeeping = 13

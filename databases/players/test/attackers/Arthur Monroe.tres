@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_bfjyx"]
+
+[resource]
+script = ExtResource("1_bfjyx")
+first_name = "Arthur"
+last_name = "Monroe"
+full_name = "Arthur Monroe"
+age = 46
+height = 211
+position = "Winger"
+attack = 14
+passing = 11
+speed = 14
+defend = 13
+goalkeeping = 2

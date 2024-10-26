@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="club_data" load_steps=15 format=3 uid="uid://cjqhmtaba5n3y"]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_rvsfo"]
+[ext_resource type="Texture2D" uid="uid://02oh5n28ui3x" path="res://art/funny guy club.png" id="2_hh6n4"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Kane Bennett.tres" id="2_l2jlw"]
+[ext_resource type="Script" path="res://scripts/club_data.gd" id="2_n08nw"]
+[ext_resource type="Resource" path="res://databases/players/test/attackers/Takahiro Garcia.tres" id="3_m8x0y"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Aron Rossi.tres" id="5_vutuy"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Brendan Zimmerman.tres" id="6_dkcq6"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Cole Amin.tres" id="7_ejy12"]
+[ext_resource type="Resource" path="res://databases/players/test/defenders/Tyler Johnson.tres" id="8_g18g2"]
+[ext_resource type="Resource" path="res://databases/players/test/goalkeepers/Felix Hughes.tres" id="9_qbd0l"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Jorge Adams.tres" id="10_2vrgb"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Victor Silva.tres" id="11_3dd21"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Tomasz Bashir.tres" id="12_ey8ft"]
+[ext_resource type="Resource" path="res://databases/players/test/midfielders/Raymond Almeida.tres" id="13_vtugq"]
+
+[resource]
+script = ExtResource("2_n08nw")
+club_name = "Funny Guy FC"
+manager_name = "Jesse Mokerde"
+club_short_name = "FGFC"
+club_logo = ExtResource("2_hh6n4")
+goalkeepers = Array[ExtResource("1_rvsfo")]([ExtResource("9_qbd0l")])
+defenders = Array[ExtResource("1_rvsfo")]([ExtResource("5_vutuy"), ExtResource("6_dkcq6"), ExtResource("7_ejy12"), ExtResource("8_g18g2")])
+midfielders = Array[ExtResource("1_rvsfo")]([ExtResource("10_2vrgb"), ExtResource("11_3dd21"), ExtResource("12_ey8ft"), ExtResource("13_vtugq")])
+attackers = Array[ExtResource("1_rvsfo")]([ExtResource("2_l2jlw"), ExtResource("3_m8x0y")])

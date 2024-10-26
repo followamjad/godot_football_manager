@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_s1do6"]
+
+[resource]
+script = ExtResource("1_s1do6")
+first_name = "Joshua"
+last_name = "Reyes"
+full_name = "Joshua Reyes"
+age = 21
+height = 154
+position = "Winger"
+attack = 2
+passing = 15
+speed = 20
+defend = 4
+goalkeeping = 2

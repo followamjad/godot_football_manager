@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_jka76"]
+
+[resource]
+script = ExtResource("1_jka76")
+first_name = "Kumar"
+last_name = "Gul"
+full_name = "Kumar Gul"
+age = 22
+height = 207
+position = "Striker"
+attack = 18
+passing = 6
+speed = 11
+defend = 4
+goalkeeping = 2

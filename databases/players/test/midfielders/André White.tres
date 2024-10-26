@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_lf0mu"]
+
+[resource]
+script = ExtResource("1_lf0mu")
+first_name = "André"
+last_name = "White"
+full_name = "André White"
+age = 21
+height = 196
+position = "Midfielder"
+attack = 4
+passing = 9
+speed = 3
+defend = 17
+goalkeeping = 2

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_pmq8q"]
+
+[resource]
+script = ExtResource("1_pmq8q")
+first_name = "Santiago"
+last_name = "Christensen"
+full_name = "Santiago Christensen"
+age = 18
+height = 192
+position = "Striker"
+attack = 5
+passing = 12
+speed = 20
+defend = 20
+goalkeeping = 2

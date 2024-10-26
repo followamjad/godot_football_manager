@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_ily5p"]
+
+[resource]
+script = ExtResource("1_ily5p")
+first_name = "Nico"
+last_name = "Stein"
+full_name = "Nico Stein"
+age = 16
+height = 203
+position = "Striker"
+attack = 5
+passing = 10
+speed = 2
+defend = 16
+goalkeeping = 2

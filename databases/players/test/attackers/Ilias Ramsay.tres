@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_wetmh"]
+
+[resource]
+script = ExtResource("1_wetmh")
+first_name = "Ilias"
+last_name = "Ramsay"
+full_name = "Ilias Ramsay"
+age = 27
+height = 187
+position = "Winger"
+attack = 13
+passing = 11
+speed = 10
+defend = 3
+goalkeeping = 2

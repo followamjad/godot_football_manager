@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_adiub"]
+
+[resource]
+script = ExtResource("1_adiub")
+first_name = "Galen"
+last_name = "Monroe"
+full_name = "Galen Monroe"
+age = 24
+height = 154
+position = "Center Back"
+attack = 13
+passing = 19
+speed = 19
+defend = 4
+goalkeeping = 2

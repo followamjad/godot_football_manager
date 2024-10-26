@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_effs7"]
+
+[resource]
+script = ExtResource("1_effs7")
+first_name = "Diego"
+last_name = "Blackwood"
+full_name = "Diego Blackwood"
+age = 24
+height = 204
+position = "Midfielder"
+attack = 14
+passing = 5
+speed = 9
+defend = 8
+goalkeeping = 2

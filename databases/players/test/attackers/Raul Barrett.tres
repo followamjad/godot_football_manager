@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_dkdh4"]
+
+[resource]
+script = ExtResource("1_dkdh4")
+first_name = "Raul"
+last_name = "Barrett"
+full_name = "Raul Barrett"
+age = 23
+height = 169
+position = "Striker"
+attack = 19
+passing = 10
+speed = 14
+defend = 18
+goalkeeping = 2

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_7tm78"]
+
+[resource]
+script = ExtResource("1_7tm78")
+first_name = "Amjad"
+last_name = "McDonald"
+full_name = "Amjad McDonald"
+age = 25
+height = 223
+position = "Midfielder"
+attack = 16
+passing = 8
+speed = 7
+defend = 16
+goalkeeping = 2

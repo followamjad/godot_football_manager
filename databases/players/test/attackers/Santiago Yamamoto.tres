@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="player_data" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_x8ccn"]
+
+[resource]
+script = ExtResource("1_x8ccn")
+first_name = "Santiago"
+last_name = "Yamamoto"
+full_name = "Santiago Yamamoto"
+age = 18
+height = 171
+position = "Striker"
+attack = 15
+passing = 2
+speed = 19
+defend = 5
+goalkeeping = 2
