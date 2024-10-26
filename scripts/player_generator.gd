@@ -99,6 +99,8 @@ var base_passing: int = 2
 var base_speed: int = 2
 var base_agility: int = 2
 var base_ball_control: int = 2
+var base_shooting: int = 2
+var base_interception: int = 2
 var max_stat_added: int = 18
 
 func _ready() -> void:
@@ -118,6 +120,8 @@ func generate_players(count: int):
 		var agility_randomizer = randf()
 		var ball_control_randomizer = randf()
 		var goalkeeping_randomizer = randf()
+		var shooting_randomizer = randf()
+		var interception_randomizer = randf()
 		#player name
 		player.first_name = first_name_list[randi() % first_name_list.size()]
 		if last_name_randomizer < 0.013:
@@ -188,6 +192,30 @@ func generate_players(count: int):
 			player.agility = base_agility + randi_range(11, 14)
 		else:
 			player.agility = base_agility + randi_range(15, max_stat_added)
+
+		#player shooting
+		if shooting_randomizer < 0.2:
+			player.shooting = base_shooting + randi_range(0, 4)
+		elif shooting_randomizer < 0.4:
+			player.shooting = base_shooting + randi_range(5, 8)
+		elif shooting_randomizer < 0.6:
+			player.shooting = base_shooting + randi_range(9, 11)
+		elif shooting_randomizer < 0.95:
+			player.shooting = base_shooting + randi_range(11, 14)
+		else:
+			player.shooting = base_shooting + randi_range(15, max_stat_added)
+
+		#player interception
+		if interception_randomizer < 0.2:
+			player.interception = base_interception + randi_range(0, 4)
+		elif interception_randomizer < 0.4:
+			player.interception = base_interception + randi_range(5, 8)
+		elif interception_randomizer < 0.6:
+			player.interception = base_interception + randi_range(9, 11)
+		elif interception_randomizer < 0.95:
+			player.interception = base_interception + randi_range(11, 14)
+		else:
+			player.interception = base_interception + randi_range(15, max_stat_added)
 
 		#player ball_control
 		if ball_control_randomizer < 0.2:
