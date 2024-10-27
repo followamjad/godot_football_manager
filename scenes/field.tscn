@@ -278,6 +278,8 @@ wait_time = 0.01
 [node name="match_feed_timer" type="Timer" parent="game_handler"]
 wait_time = 0.5
 
+[node name="action_timer" type="Timer" parent="game_handler"]
+
 [connection signal="button_up" from="game_handler/CanvasLayer/button_container/start_match_button" to="game_handler" method="_on_start_match_button_button_up"]
 [connection signal="button_up" from="game_handler/CanvasLayer/button_container/pause_match_button" to="game_handler" method="_on_pause_match_button_button_up"]
 [connection signal="button_up" from="game_handler/CanvasLayer/button_container/exit_match_button" to="game_handler" method="_on_exit_match_button_button_up"]
@@ -285,3 +287,4 @@ wait_time = 0.5
 [connection signal="pressed" from="game_handler/CanvasLayer/away_attack_debug" to="game_handler" method="_on_away_attack_debug_pressed"]
 [connection signal="timeout" from="game_handler/second_timer" to="game_handler" method="_on_second_timer_timeout"]
 [connection signal="timeout" from="game_handler/match_feed_timer" to="game_handler" method="_on_match_feed_timer_timeout"]
+[connection signal="timeout" from="game_handler/action_timer" to="game_handler" method="_on_action_timer_timeout"]

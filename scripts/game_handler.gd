@@ -12,6 +12,8 @@ var is_match_paused: bool = false
 var is_second_half: bool = false
 var playing_team: Array[club_data] = []
 var game_starter: club_data
+var not_game_starter: club_data
+var game_starter_index: int
 var on_possesion: club_data
 var player_on_possesion : player_data
 var match_feed_to_be_generated: Array[String] = []
@@ -57,6 +59,7 @@ func update_match_feed():
 func _process(delta: float) -> void:
 	update_screen()
 	if is_match_started and not is_match_paused:
+		action_handler()
 		# second label handler
 		if current_match_time_seconds < 10:
 			current_time_second_label.text = "0" + str(current_match_time_seconds)
@@ -113,8 +116,20 @@ func kick_off():
 	second_timer.start()
 	update_match_feed()
 
+func first_action_after_kick_off():
+	var match_feed_kick_off_first_action: String
+	var match_feed_randomizer = randf()
+	if match_feed_randomizer < 0.04:
+		match_feed_kick_off_first_action = str(current_match_time_minutes) + "' " + " Mistake by " + game_starter.club_name + ", they lose the ball"
+		on_possesion
+
 func flip_coin():
-	game_starter = playing_team[randi() % playing_team.size()]
+	var game_starter_randomizer = randi() % playing_team.size()
+	game_starter = playing_team[game_starter_randomizer]
+	if game_starter_randomizer == 0:
+		not_game_starter = playing_team[1]
+	else:
+		not_game_starter = playing_team[0]
 	var match_feed_ref_is_flipping_coin: String
 	var match_feed_who_start_game: String
 	match_feed_ref_is_flipping_coin = str(current_match_time_minutes) + "'" + " Referee is flipping coin"
@@ -126,6 +141,9 @@ func flip_coin():
 func handle_team():
 	playing_team.append(home_club)
 	playing_team.append(away_club)
+
+func action_handler():
+	pass
 
 #screen updater
 
@@ -180,3 +198,6 @@ func _on_match_feed_timer_timeout() -> void:
 		generate_match_feed.text = str(match_feed_to_be_generated[match_feed_generation_index])
 		match_feed_label_container.add_child(generate_match_feed)
 		match_feed_generation_index += 1
+
+func _on_action_timer_timeout() -> void:
+	pass # Replace with function body.
