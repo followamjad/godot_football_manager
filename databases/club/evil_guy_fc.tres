@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="club_data" load_steps=9 format=3 uid="uid://dt2ysv2fkd36"]
 
-[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_jx1qu"]
-[ext_resource type="Script" path="res://scripts/club_data.gd" id="2_tup5s"]
+[ext_resource type="Script" uid="uid://dijawcpvm8vwk" path="res://scripts/player_data.gd" id="1_jx1qu"]
+[ext_resource type="Script" uid="uid://bf4imwxwsbllb" path="res://scripts/club_data.gd" id="2_tup5s"]
 [ext_resource type="Resource" path="res://databases/players/test/attackers/Alonzo Takahashi.tres" id="2_uav6e"]
 [ext_resource type="Resource" path="res://databases/players/test/defenders/Brian Fisher.tres" id="4_n16p4"]
 [ext_resource type="Resource" path="res://databases/players/test/defenders/Earl Davidson.tres" id="5_3niad"]
@@ -22,3 +22,4 @@ goalkeepers = Array[ExtResource("1_jx1qu")]([ExtResource("6_1pux8")])
 defenders = Array[ExtResource("1_jx1qu")]([ExtResource("4_n16p4"), ExtResource("5_3niad")])
 midfielders = Array[ExtResource("1_jx1qu")]([ExtResource("7_hi1u0")])
 attackers = Array[ExtResource("1_jx1qu")]([ExtResource("2_uav6e")])
+field_player = Array[ExtResource("1_jx1qu")]([])

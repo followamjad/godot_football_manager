@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="club_data" load_steps=9 format=3 uid="uid://cjqhmtaba5n3y"]
 
-[ext_resource type="Script" path="res://scripts/player_data.gd" id="1_rvsfo"]
+[ext_resource type="Script" uid="uid://dijawcpvm8vwk" path="res://scripts/player_data.gd" id="1_rvsfo"]
 [ext_resource type="Texture2D" uid="uid://02oh5n28ui3x" path="res://art/funny guy club.png" id="2_hh6n4"]
-[ext_resource type="Script" path="res://scripts/club_data.gd" id="2_n08nw"]
+[ext_resource type="Script" uid="uid://bf4imwxwsbllb" path="res://scripts/club_data.gd" id="2_n08nw"]
 [ext_resource type="Resource" path="res://databases/players/test/attackers/Omar Santiago.tres" id="2_yg40q"]
 [ext_resource type="Resource" path="res://databases/players/test/defenders/Elijah Brooks.tres" id="4_dlapp"]
 [ext_resource type="Resource" path="res://databases/players/test/goalkeepers/Khalid Ahmed.tres" id="5_ttg6i"]
@@ -22,3 +22,4 @@ goalkeepers = Array[ExtResource("1_rvsfo")]([ExtResource("5_ttg6i")])
 defenders = Array[ExtResource("1_rvsfo")]([ExtResource("4_dlapp")])
 midfielders = Array[ExtResource("1_rvsfo")]([ExtResource("6_844xy"), ExtResource("7_ay0j4")])
 attackers = Array[ExtResource("1_rvsfo")]([ExtResource("2_yg40q")])
+field_player = Array[ExtResource("1_rvsfo")]([])
