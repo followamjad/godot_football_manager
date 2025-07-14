@@ -569,6 +569,21 @@ text = "[color=#0000000]Leadership : 99[/color]"
 fit_content = true
 vertical_alignment = 1
 
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -79.0
+offset_top = -51.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+text = "Again?"
+
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.521569)
 offset_left = -554.0
