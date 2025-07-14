@@ -1,3 +1,438 @@
-[gd_scene format=3 uid="uid://ipk0yyobau0y"]
+[gd_scene load_steps=9 format=3 uid="uid://ipk0yyobau0y"]
+
+[ext_resource type="Texture2D" uid="uid://5rco5imgsfvx" path="res://art/aseprite/bronze.png" id="1_dgf4d"]
+[ext_resource type="Texture2D" uid="uid://bbw6qsx6anrxb" path="res://art/aseprite/silver.png" id="2_tup8y"]
+[ext_resource type="Texture2D" uid="uid://bgqultgufi3kr" path="res://art/aseprite/gold.png" id="3_droki"]
+[ext_resource type="Texture2D" uid="uid://jki5ecj5kh5q" path="res://art/aseprite/platinum.png" id="4_55nud"]
+[ext_resource type="Texture2D" uid="uid://x1f5fd4kqqpl" path="res://art/aseprite/Special.png" id="5_ba6li"]
+[ext_resource type="FontFile" uid="uid://doueaoje5s4tr" path="res://font/Minecraft.ttf" id="6_tup8y"]
+[ext_resource type="Texture2D" uid="uid://dkqv55je5tey1" path="res://art/aseprite/player.png" id="7_droki"]
+[ext_resource type="Texture2D" uid="uid://cfly48tui3tql" path="res://art/aseprite/indonesia.png" id="8_55nud"]
 
 [node name="TheCard" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.0
+offset_top = 9.0
+offset_right = 281.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=#0000000]FOOTBALL CARD GENERATOR[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardController" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BronzeCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+position = Vector2(225.56, 205)
+scale = Vector2(1.84, 1.84)
+texture = ExtResource("1_dgf4d")
+
+[node name="SilverCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+visible = false
+position = Vector2(229.64, 210)
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("2_tup8y")
+
+[node name="GoldCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+visible = false
+position = Vector2(229.64, 207)
+scale = Vector2(1.96, 1.96)
+texture = ExtResource("3_droki")
+
+[node name="PlatinumCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+visible = false
+position = Vector2(229.64, 205)
+scale = Vector2(1.96, 1.96)
+texture = ExtResource("4_55nud")
+
+[node name="SpecialCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+visible = false
+position = Vector2(229.64, 205)
+scale = Vector2(1.96, 1.96)
+texture = ExtResource("5_ba6li")
+
+[node name="FlagSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+position = Vector2(229, 289)
+texture = ExtResource("8_55nud")
+
+[node name="PlayerSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
+position = Vector2(231.56, 167)
+scale = Vector2(5.20833, 5.20833)
+texture = ExtResource("7_droki")
+
+[node name="CardLabelController" type="Control" parent="CanvasLayer/CardController"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TotalStatLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 0
+offset_left = 140.56
+offset_top = 121.0
+offset_right = 191.56
+offset_bottom = 162.0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=#3e281c]99[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PositionLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 0
+offset_left = 140.56
+offset_top = 151.0
+offset_right = 191.56
+offset_bottom = 174.0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]ATT[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -204.44
+offset_top = -250.0
+offset_right = -62.4402
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]ZAINI ZAINIIIII[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.44
+offset_top = -235.0
+offset_right = -171.44
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[color=#000000]PAC[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatNumberLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.44
+offset_top = -221.0
+offset_right = -171.44
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]90[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatLabel2" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.44
+offset_top = -235.0
+offset_right = -145.44
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[color=#3e281c]PAC[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatNumberLabel2" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.44
+offset_top = -221.0
+offset_right = -145.44
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]90[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatLabel3" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.44
+offset_top = -235.0
+offset_right = -120.44
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[color=#3e281c]PAC[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatNumberLabel3" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.44
+offset_top = -221.0
+offset_right = -120.44
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]90[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatLabel4" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.44
+offset_top = -235.0
+offset_right = -95.4402
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[color=#3e281c]PAC[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatNumberLabel4" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.44
+offset_top = -221.0
+offset_right = -95.4402
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]90[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatLabel5" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -95.4402
+offset_top = -235.0
+offset_right = -71.4402
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[color=#3e281c]PAC[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopStatNumberLabel5" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -95.4402
+offset_top = -221.0
+offset_right = -71.4402
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#3e281c]90[/color]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScreenLabelController" type="Control" parent="CanvasLayer/CardController"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 88.0
+offset_right = 632.0
+offset_bottom = 134.0
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=#0000000]AMJAD ISMAIL[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/CardController/ScreenLabelController"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 133.0
+offset_right = 587.0
+offset_bottom = 321.0
+horizontal_scroll_mode = 0
+
+[node name="StatLabelContainer" type="VBoxContainer" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer"]
+layout_mode = 2
+
+[node name="StatLabel1" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Position : Forward[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel2" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Age : 26[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel3" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Nationality : Indonesian[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel4" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Pace : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel5" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Passing : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="GenerateButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = 132.0
+offset_right = 111.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_tup8y")
+theme_override_font_sizes/font_size = 32
+text = "GENERATE"
