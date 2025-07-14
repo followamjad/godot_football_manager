@@ -87,9 +87,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -281.0
-offset_top = 9.0
+offset_top = 31.0
 offset_right = 281.0
-offset_bottom = 55.0
+offset_bottom = 77.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 32
@@ -108,40 +108,40 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BronzeCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
-position = Vector2(225.56, 205)
+visible = false
+position = Vector2(225.56, 242)
 scale = Vector2(1.84, 1.84)
 texture = ExtResource("1_dgf4d")
 
 [node name="SilverCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
 visible = false
-position = Vector2(229.64, 210)
+position = Vector2(229.64, 247)
 scale = Vector2(1.92, 1.92)
 texture = ExtResource("2_tup8y")
 
 [node name="GoldCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
 visible = false
-position = Vector2(229.64, 207)
+position = Vector2(229.64, 244)
 scale = Vector2(1.96, 1.96)
 texture = ExtResource("3_droki")
 
 [node name="PlatinumCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
 visible = false
-position = Vector2(229.64, 205)
+position = Vector2(229.64, 242)
 scale = Vector2(1.96, 1.96)
 texture = ExtResource("4_55nud")
 
 [node name="SpecialCardSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
-visible = false
-position = Vector2(229.64, 205)
+position = Vector2(229.64, 242)
 scale = Vector2(1.96, 1.96)
 texture = ExtResource("5_ba6li")
 
 [node name="FlagSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
-position = Vector2(229, 289)
+position = Vector2(229, 326)
 texture = ExtResource("8_55nud")
 
 [node name="PlayerSprite" type="Sprite2D" parent="CanvasLayer/CardController"]
-position = Vector2(231.56, 167)
+position = Vector2(231.56, 204)
 scale = Vector2(5.20833, 5.20833)
 texture = ExtResource("7_droki")
 
@@ -156,9 +156,9 @@ grow_vertical = 2
 [node name="TotalStatLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
 layout_mode = 0
 offset_left = 140.56
-offset_top = 121.0
+offset_top = 158.0
 offset_right = 191.56
-offset_bottom = 162.0
+offset_bottom = 199.0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
@@ -170,9 +170,9 @@ vertical_alignment = 1
 [node name="PositionLabel" type="RichTextLabel" parent="CanvasLayer/CardController/CardLabelController"]
 layout_mode = 0
 offset_left = 140.56
-offset_top = 151.0
+offset_top = 188.0
 offset_right = 191.56
-offset_bottom = 174.0
+offset_bottom = 211.0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -190,9 +190,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -204.44
-offset_top = -250.0
+offset_top = -213.0
 offset_right = -62.4402
-offset_bottom = -228.0
+offset_bottom = -191.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
@@ -211,9 +211,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -195.44
-offset_top = -235.0
+offset_top = -198.0
 offset_right = -171.44
-offset_bottom = -213.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 8
@@ -231,15 +231,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -195.44
-offset_top = -221.0
+offset_top = -184.0
 offset_right = -171.44
-offset_bottom = -199.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[color=#3e281c]90[/color]"
+text = "[color=#3e281c]99[/color]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -252,9 +252,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -169.44
-offset_top = -235.0
+offset_top = -198.0
 offset_right = -145.44
-offset_bottom = -213.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 8
@@ -272,15 +272,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -169.44
-offset_top = -221.0
+offset_top = -184.0
 offset_right = -145.44
-offset_bottom = -199.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[color=#3e281c]90[/color]"
+text = "[color=#3e281c]99[/color]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -293,9 +293,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -144.44
-offset_top = -235.0
+offset_top = -198.0
 offset_right = -120.44
-offset_bottom = -213.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 8
@@ -313,15 +313,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -144.44
-offset_top = -221.0
+offset_top = -184.0
 offset_right = -120.44
-offset_bottom = -199.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[color=#3e281c]90[/color]"
+text = "[color=#3e281c]99[/color]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -334,9 +334,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -119.44
-offset_top = -235.0
+offset_top = -198.0
 offset_right = -95.4402
-offset_bottom = -213.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 8
@@ -354,15 +354,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -119.44
-offset_top = -221.0
+offset_top = -184.0
 offset_right = -95.4402
-offset_bottom = -199.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[color=#3e281c]90[/color]"
+text = "[color=#3e281c]99[/color]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -375,9 +375,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -95.4402
-offset_top = -235.0
+offset_top = -198.0
 offset_right = -71.4402
-offset_bottom = -213.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 8
@@ -395,15 +395,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -95.4402
-offset_top = -221.0
+offset_top = -184.0
 offset_right = -71.4402
-offset_bottom = -199.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[color=#3e281c]90[/color]"
+text = "[color=#3e281c]99[/color]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -411,9 +411,9 @@ vertical_alignment = 1
 [node name="CaptainBadgeTexture" type="TextureRect" parent="CanvasLayer/CardController/CardLabelController"]
 layout_mode = 0
 offset_left = 159.0
-offset_top = 169.0
+offset_top = 206.0
 offset_right = 171.0
-offset_bottom = 181.0
+offset_bottom = 218.0
 texture = ExtResource("11_jtjia")
 
 [node name="ScreenLabelController" type="Control" parent="CanvasLayer/CardController"]
@@ -427,9 +427,9 @@ grow_vertical = 2
 [node name="NameLabel" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController"]
 layout_mode = 0
 offset_left = 368.0
-offset_top = 88.0
+offset_top = 125.0
 offset_right = 632.0
-offset_bottom = 134.0
+offset_bottom = 171.0
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
@@ -440,9 +440,9 @@ vertical_alignment = 1
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/CardController/ScreenLabelController"]
 layout_mode = 0
 offset_left = 369.0
-offset_top = 133.0
+offset_top = 170.0
 offset_right = 587.0
-offset_bottom = 321.0
+offset_bottom = 358.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
@@ -568,37 +568,6 @@ bbcode_enabled = true
 text = "[color=#0000000]Leadership : 99[/color]"
 fit_content = true
 vertical_alignment = 1
-
-[node name="GenerateButton" type="Button" parent="CanvasLayer"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = -123.0
-offset_right = 104.0
-offset_bottom = -41.0
-grow_horizontal = 2
-grow_vertical = 0
-focus_mode = 0
-theme_override_fonts/font = ExtResource("6_tup8y")
-theme_override_font_sizes/font_size = 32
-text = "GENERATE"
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -101.0
-offset_top = -36.0
-offset_right = 101.0
-offset_bottom = -21.0
-grow_horizontal = 2
-grow_vertical = 0
-show_percentage = false
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.521569)
