@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ipk0yyobau0y"]
+[gd_scene load_steps=12 format=3 uid="uid://ipk0yyobau0y"]
 
 [ext_resource type="Texture2D" uid="uid://5rco5imgsfvx" path="res://art/aseprite/bronze.png" id="1_dgf4d"]
 [ext_resource type="Texture2D" uid="uid://bbw6qsx6anrxb" path="res://art/aseprite/silver.png" id="2_tup8y"]
@@ -9,7 +9,29 @@
 [ext_resource type="Texture2D" uid="uid://dkqv55je5tey1" path="res://art/aseprite/player.png" id="7_droki"]
 [ext_resource type="Texture2D" uid="uid://cfly48tui3tql" path="res://art/aseprite/indonesia.png" id="8_55nud"]
 
-[node name="TheCard" type="Node2D"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_55nud"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_ba6li"]
+sky_material = SubResource("ProceduralSkyMaterial_55nud")
+
+[sub_resource type="Environment" id="Environment_oru0s"]
+background_mode = 2
+sky = SubResource("Sky_ba6li")
+tonemap_mode = 2
+
+[node name="TheCard" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_oru0s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 2.87655, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39014, 2.77758)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -422,17 +444,32 @@ fit_content = true
 vertical_alignment = 1
 
 [node name="GenerateButton" type="Button" parent="CanvasLayer"]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -97.0
-offset_top = 132.0
-offset_right = 111.0
-offset_bottom = 214.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -123.0
+offset_right = 104.0
+offset_bottom = -41.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+focus_mode = 0
 theme_override_fonts/font = ExtResource("6_tup8y")
 theme_override_font_sizes/font_size = 32
 text = "GENERATE"
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -101.0
+offset_top = -36.0
+offset_right = 101.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+show_percentage = false
