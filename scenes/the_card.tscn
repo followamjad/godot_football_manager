@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://ipk0yyobau0y"]
+[gd_scene load_steps=19 format=3 uid="uid://ipk0yyobau0y"]
 
+[ext_resource type="PackedScene" uid="uid://ddpas2d5hhxk0" path="res://art/3D/stadium.blend" id="1_ba6li"]
 [ext_resource type="Texture2D" uid="uid://5rco5imgsfvx" path="res://art/aseprite/bronze.png" id="1_dgf4d"]
+[ext_resource type="Script" uid="uid://eft84f3ls1qp" path="res://scripts/camera_3d.gd" id="2_onmkp"]
 [ext_resource type="Texture2D" uid="uid://bbw6qsx6anrxb" path="res://art/aseprite/silver.png" id="2_tup8y"]
 [ext_resource type="Texture2D" uid="uid://bgqultgufi3kr" path="res://art/aseprite/gold.png" id="3_droki"]
 [ext_resource type="Texture2D" uid="uid://jki5ecj5kh5q" path="res://art/aseprite/platinum.png" id="4_55nud"]
@@ -8,9 +10,12 @@
 [ext_resource type="FontFile" uid="uid://doueaoje5s4tr" path="res://font/Minecraft.ttf" id="6_tup8y"]
 [ext_resource type="Texture2D" uid="uid://dkqv55je5tey1" path="res://art/aseprite/player.png" id="7_droki"]
 [ext_resource type="Texture2D" uid="uid://cfly48tui3tql" path="res://art/aseprite/indonesia.png" id="8_55nud"]
+[ext_resource type="Texture2D" uid="uid://b0wy77v0hh56f" path="res://art/aseprite/back.png" id="10_oru0s"]
+[ext_resource type="Texture2D" uid="uid://cycya1wehudjw" path="res://art/aseprite/captain.png" id="11_jtjia"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_55nud"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+sky_top_color = Color(0.0712621, 0.0942229, 0.126152, 1)
+sky_horizon_color = Color(0.0581502, 0.0607934, 0.0649658, 1)
 ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
 [sub_resource type="Sky" id="Sky_ba6li"]
@@ -20,18 +25,60 @@ sky_material = SubResource("ProceduralSkyMaterial_55nud")
 background_mode = 2
 sky = SubResource("Sky_ba6li")
 tonemap_mode = 2
+volumetric_fog_density = 0.0115
+
+[sub_resource type="Animation" id="Animation_onmkp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oru0s"]
+resource_name = "camera_rotating"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_onmkp"]
+_data = {
+&"RESET": SubResource("Animation_onmkp"),
+&"camera_rotating": SubResource("Animation_oru0s")
+}
 
 [node name="TheCard" type="Node3D"]
+
+[node name="stadium" parent="." instance=ExtResource("1_ba6li")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_oru0s")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 2.87655, 0)
+light_energy = 0.485
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39014, 2.77758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.71063, 2.77758)
+script = ExtResource("2_onmkp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -361,6 +408,14 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CaptainBadgeTexture" type="TextureRect" parent="CanvasLayer/CardController/CardLabelController"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 169.0
+offset_right = 171.0
+offset_bottom = 181.0
+texture = ExtResource("11_jtjia")
+
 [node name="ScreenLabelController" type="Control" parent="CanvasLayer/CardController"]
 layout_mode = 1
 anchors_preset = 15
@@ -389,6 +444,7 @@ offset_top = 133.0
 offset_right = 587.0
 offset_bottom = 321.0
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
 [node name="StatLabelContainer" type="VBoxContainer" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer"]
 layout_mode = 2
@@ -429,7 +485,7 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[color=#0000000]Pace : 99[/color]"
+text = "[color=#0000000]Height : 178 cm[/color]"
 fit_content = true
 vertical_alignment = 1
 
@@ -439,7 +495,77 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("6_tup8y")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
+text = "[color=#0000000]Weight : 100 kg[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel6" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
 text = "[color=#0000000]Passing : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel7" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Defend : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel8" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Shooting : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel9" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Speed : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel10" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Interception : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel11" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Goalkeeping : 99[/color]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="StatLabel12" type="RichTextLabel" parent="CanvasLayer/CardController/ScreenLabelController/ScrollContainer/StatLabelContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_tup8y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[color=#0000000]Leadership : 99[/color]"
 fit_content = true
 vertical_alignment = 1
 
@@ -473,3 +599,136 @@ offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 0
 show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.521569)
+offset_left = -554.0
+offset_top = -188.0
+offset_right = 1366.0
+offset_bottom = 892.0
+texture = ExtResource("10_oru0s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_onmkp")
+}
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.4571, -56.039)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9886, 48.4571, -56.039)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9886, 17.9588, -44.8777)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.604378, 17.9588, -44.8777)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5535, 17.9588, -44.8777)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.6439, 17.9588, 0.731294)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.2069, 17.9588, 41.4962)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10047, 17.9588, 41.4962)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.8269, 17.9588, 39.5414)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.6542, 17.9588, 0.51646)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4516, 4.98106, 15.8021)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4516, 4.98106, -10.9756)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39018, 4.98106, -16.7896)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2522, 4.98106, -12.3796)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2522, 4.98106, 16.7592)
+light_energy = 4.0
+omni_range = 15.6837
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0138, 48.4571, -56.039)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 75.8339, 48.4571, 19.4948)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 75.8339, 48.4571, -18.9934)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -75.2049, 48.4571, 19.4948)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -75.2049, 48.4571, -18.9934)
+light_energy = 4.0
+omni_range = 8.42735
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(-1, 7.10542e-15, 8.74228e-08, 6.17665e-08, 0.707687, 0.706527, -6.18679e-08, 0.706527, -0.707687, -43.5488, 47.082, -55.5194)
+light_energy = 16.0
+spot_range = 81.2621
+spot_angle = 19.7115
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(-1, 7.10542e-15, 8.74228e-08, 6.17665e-08, 0.707687, 0.706527, -6.18679e-08, 0.706527, -0.707687, -0.0594883, 47.082, -55.5194)
+light_energy = 16.0
+spot_range = 81.2621
+spot_angle = 19.7115
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(-1, 7.10542e-15, 8.74228e-08, 6.17665e-08, 0.707687, 0.706527, -6.18679e-08, 0.706527, -0.707687, 44.9847, 47.082, -55.5194)
+light_energy = 16.0
+spot_range = 81.2621
+spot_angle = 19.7115
